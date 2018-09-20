@@ -1,0 +1,296 @@
+body {
+  margin: 0;
+  font-family: Raleway;
+  background-color: #fff;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 2px #e6e6e6 solid;
+}
+#logo {
+  padding: 7px 10px 7px 10px;
+  font-size: 36px;
+  font-weight: 900;
+  color: #308aaa;
+  margin-left: 10px;
+}
+#navbar_ {
+  font-size: 20px;
+  display: flex;
+  margin-right: 10px;
+}
+#search {
+  padding: 7px 10px 7px 10px;
+  border-left: 1px #e6e6e6 solid;
+}
+#searchIcon {
+  width: 20px;
+  padding: 10px;
+}
+#navbar {
+  padding: 7px 10px 7px 10px;
+  display: flex;
+  border-left: 1px #e6e6e6 solid;
+}
+.navlink {
+  padding: 10px;
+  font-size: 18px;
+}
+#xbar {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px #e6e6e6 solid;
+}
+#searchbox {
+  display: none;
+}
+.searchtext {
+  border: none;
+  padding: 0;
+  outline: none;
+  float: right;
+  height: 40px;
+  font-size: 18px;
+  font-family: 'Raleway';
+}
+#links {
+  padding: 7px 17px 7px 17px;
+  display: flex;
+}
+.link {
+  text-decoration: underline;
+  margin-right: 20px;
+  line-height: 1.5;
+}
+#add_ {
+  background-color: #308aaa;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+#add {
+  width: 15px;
+  margin-top: 12px;
+}
+#body {
+  display: flex;
+  font-size: 18px;
+}
+#articlesuper_ {
+  width: 70%;
+}
+#article_ {
+  padding: 5% 10% 30px 10%;
+}
+#header_ {
+  display: flex;
+  justify-content: space-between;
+}
+#heading {
+  font-weight: 600;
+  font-size: 50px;
+}
+#date {
+  margin-top: 6px;
+}
+#colHead {
+  margin-top: 8px;
+  margin-bottom: -4px;
+  font-weight: 600;
+  color: #d1d1d1;
+}
+#collection {
+  font-weight: 600;
+  font-size: 27px;
+  text-align: right;
+}
+.grey {
+  color: #6f6f6f;
+}
+.lightgrey {
+  color: #a1a1a1;
+}
+.darkgrey {
+  color: #484848;
+}
+#article_info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+#author {
+  padding-bottom: 7px;
+}
+#views_ {
+  text-align: right;
+}
+#article {
+  margin-top: 20px;
+  font-size: 24px;
+  line-height: 1.6;
+  text-align: justify;
+}
+.num {
+  font-family: 'lato';
+  font-size: 18px;
+}
+#likeBtn {
+  width: 24px;
+  margin-right: 10px;
+}
+#like {
+  margin-right: 30px;
+}
+#dislikeBtn {
+  width: 24px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+#commentsuper_ {
+  border-left: 1px #e6e6e6 solid;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+#commentbox_ {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px #e6e6e6 solid;
+}
+#commentbox {
+  margin-top: 10px;
+  width: 100%;
+  font-family: Raleway;
+  resize: none;
+  outline: none;
+  border: none;
+  font-size: 18px;
+}
+#cmntBtn_ {
+  display: flex;
+  flex-direction: row-reverse;
+}
+#cmnt_btn {
+  font-size: 12px;
+  color: #fff;
+  font-family: Raleway;
+  float: right;
+  background-color: #308aaa;
+  font-weight: 400;
+  border: none;
+  padding: 4px 6px 4px 6px;
+  outline: none;
+}
+#comment {
+  padding: 15px 20px 15px 20px;
+  border-bottom: 1px solid #e6e6e6;
+}
+#user_name {
+  font-weight: 600;
+  font-size: 18px;
+  color: #484848;
+}
+#user {
+  display: flex;
+  justify-content: space-between;
+}
+#text {
+  margin-top: 5px;
+}
+#ago {
+  font-size: 14px;
+  color: #a1a1a1;
+}
+.reply {
+  margin-top: 8px;
+  text-align: right;
+  font-size: 14px;
+  color: #a1a1a1;
+}
+@media (max-width: 680px) {
+  #body {
+    display: block;
+    font-size: 14px;
+  }
+  #article_ {
+    padding: 5% 7% 30px 7%;
+  }
+  #author {
+    padding-bottom: 5px;
+  }
+  #date {
+    margin-top: 5px;
+  }
+  #heading {
+    font-size: 32px;
+  }
+  #colHead {
+    font-size: 12px;
+  }
+  #collection {
+    font-size: 16px;
+  }
+  #like,
+  #dislike,
+  #views {
+    font-size: 15px;
+  }
+  #dislikeBtn,
+  #likeBtn {
+    width: 18px;
+  }
+  #commentsuper_,
+  #articlesuper_ {
+    width: 100%;
+  }
+  #commentsuper_ {
+    border-top: 1px #e6e6e6 solid;
+  }
+  #article_info {
+    margin-top: 10px;
+  }
+  #likes_ {
+    text-align: right;
+    margin-top: -4px;
+  }
+  #article {
+    font-size: 19px;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 500px) {
+  #logo {
+    font-size: 28px;
+    padding: 7px 10px 7px 0px;
+  }
+  #navbar_ {
+    margin-right: 0px;
+  }
+  .navlink {
+    padding: 6px;
+    font-size: 16px;
+  }
+  #search,
+  #links {
+    display: none;
+  }
+  #searchbox {
+    display: block;
+  }
+  #article_info {
+    display: block;
+    margin-top: 4px;
+  }
+  #right {
+    margin-top: 15px;
+  }
+  #author {
+    padding-bottom: 0px;
+  }
+  #date {
+    margin-top: 0px;
+  }
+}

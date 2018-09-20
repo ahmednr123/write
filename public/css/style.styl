@@ -1,0 +1,312 @@
+body
+	margin 0
+	font-family Raleway
+	background-color white
+	
+
+//=====================POPUP================================//
+
+form
+	margin-bottom 0
+	
+#transparent_screen
+	position fixed
+	top 0
+	width 100%
+	height 100%
+	background rgba(255,255,255,0.8)
+	z-index 0
+
+#popup_
+	width 220px
+	//margin-top 200px
+	position fixed
+	margin-left calc(50% - 141px)
+	padding 30px
+	background-color white
+	border 1px solid #d6d6d6
+	z-index 3
+	//border-radius 10px
+		
+.login_section
+	margin-top 14%
+	
+.register_section
+	margin-top 10%
+		
+#bar
+	display flex
+	justify-content space-between
+	margin-bottom 17px
+	
+.selected
+	font-weight 600
+	
+#login_submit
+	cursor pointer
+	background-color grey
+	color white
+	
+#login_submit:hover
+	border 1px solid grey
+	background-color white
+	color grey
+
+.login_styl
+	width 220px
+	border 1px solid lightgrey
+	outline none
+	font-size 16px
+	padding 10px 8px 10px 8px
+	margin-bottom 20px
+	color grey
+	background white
+	
+.login_styl:nth-last-child(1)
+	margin-bottom 0
+	
+#login_other
+	display flex
+	height 30px
+	justify-content space-between
+	
+.grey
+	color #6F6F6F
+	
+.lightgrey
+	color #A1A1A1
+	
+.darkgrey
+	color #484848
+	
+//=====================================================//
+
+#header
+	display flex
+	justify-content space-between
+	width 100%
+	border-bottom 2px #E6E6E6 solid
+
+#logo
+	padding 7px 10px 7px 10px
+	font-size 36px
+	font-weight 900
+	color #308aaa
+	margin-left 10px
+	
+#navbar_
+	font-size 20px
+	display flex
+	margin-right 10px
+	
+#search
+	padding 7px 10px 7px 10px
+	border-left 1px #E6E6E6 solid
+	display flex
+
+#searchBox_top
+	display none
+	margin-left 10px
+	padding 0
+	outline none
+	height 40px
+	font-size 18px
+	font-family 'Raleway'
+	border none
+
+#searchIcon
+	width 20px
+	padding 10px
+		
+#navbar
+	padding 7px 10px 7px 10px
+	display flex
+	border-left 1px #E6E6E6 solid
+
+.navlink
+	padding 10px
+	font-size 18px
+	
+//------------------------------------------------//
+	
+#xbar
+	display flex
+	justify-content space-between
+	border-bottom 2px #E6E6E6 solid
+	
+#searchbox
+	display none
+
+.searchtext
+	border none
+	padding 0
+	outline none
+	float right
+	height 40px
+	font-size 18px
+	font-family 'Raleway'
+	
+#links
+	padding 7px 17px 7px 17px
+	display flex
+	
+.link
+	text-decoration underline
+	margin-right 20px
+	line-height 1.5
+	
+#add_
+	background-color #308aaa
+	width 40px
+	height 40px
+	text-align center
+	
+#add
+	width 15px
+	margin-top 12px
+	
+//------------------------------------------------//
+
+#content_
+	display flex
+
+#activity_
+	display flex
+	width 17%
+	min-width 120px
+	flex-direction column
+
+#head
+	padding 15px
+	padding-left 30px
+	font-size 20px
+	font-weight 600
+	display flex
+	color grey
+	border-bottom 1px #E6E6E6 solid
+
+#writers
+	padding 15px
+	padding-left 30px
+	font-size 20px
+	font-weight 600
+
+.writer
+	padding 11px 0px 11px 0px
+	color #adabab
+	
+#content
+	display flex
+	flex-direction column
+	border-left 1px #E6E6E6 solid
+	height calc(100% - 100px)
+	width 100%
+	
+#tabs
+	padding 15px
+	font-size 20px
+	display flex
+	color grey
+	border-bottom 1px #E6E6E6 solid
+	padding-left 30px
+	overflow auto
+	
+.tab
+	margin-right 20px
+	
+.selected
+	font-weight 600
+	color #616161
+	
+#articles_
+	display flex
+	width 55%
+	min-width 600px
+	border-right 1px #E6E6E6 solid
+	height calc(100% - 60px)
+	overflow auto
+	
+.article
+	border-bottom 1px #E6E6E6 solid
+	display block
+	
+.articlem
+	padding 20px 20px 0px 20px
+	display block
+	
+.articleH
+	font-size 26px
+	font-weight 600
+	color #666666
+	
+.articleC
+	font-size 18px
+	padding-top 10px
+	color grey
+	
+.articleT_
+	text-align right
+	color lightgrey
+	padding 3px 15px 3px 15px
+	
+.article:hover > .articlem
+	background-color #E6E6E6
+	padding 20px 20px 20px 20px
+	
+.article:hover > .articleT_
+	background-color #CCCCCC
+	color white
+	
+#in_tabs
+	display flex
+	
+@media(max-width: 680px)
+	#content
+		height calc(100% - 92px)
+		width calc(100% - 1px)
+		
+	#logo
+		font-size 28px
+		padding 7px 10px 7px 0px
+		
+	#navbar_
+		margin-right 0px
+		
+	.navlink
+		padding 6px
+		font-size 16px
+
+	#search
+	#links
+		display none
+	
+	#searchbox
+		display block
+		
+	#activity_
+		display none
+		
+	#tabs
+		padding 10px
+		font-size 18px
+		
+	#articles_
+		min-width 0
+		width calc(100% - 1px)
+		height calc(100% + 20px)
+		text-align justify
+		
+	.articlem
+		padding 15px 15px 0px 15px
+		
+	.articleH
+		font-size 22px;
+		
+	.articleC
+		font-size 16px;
+		
+	.login_section
+		margin-top 25%
+	
+	.register_section
+		margin-top 20%

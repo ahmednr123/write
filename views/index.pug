@@ -1,0 +1,88 @@
+html
+	head
+		title Write.
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		link(rel="stylesheet", href="css/style.css")
+		link(rel="stylesheet", href="css/login.css")
+		link(href="https://fonts.googleapis.com/css?family=Raleway:900,400", rel='stylesheet', type='text/css')
+		script.
+			var _global = {};
+			_global.user = ('!{user}' == '')? null:'!{user}';
+
+	body
+		#header
+			#logo Write.
+			#navbar_
+				#search
+					#searchIcon_
+						img#searchIcon(src="images/searchIcon.svg")
+					input#searchBox_top(type="text", placeholder="Search")
+				#navbar
+					each json in nav
+						- var url = json.link || null
+						- var id = json.id || ''
+						.navlink(id=id)
+							if url
+								a(href=url) #{json.name}
+							else
+								| #{json.name}
+
+
+		#xbar
+			#searchbox
+				img#searchIcon(src="images/searchIcon.svg")
+				input.searchtext(type="text", placeholder="Search")
+			#links
+			#add_
+				img#add(src="images/add.png")
+
+		#transparent_screen(style="display:none")
+			#popup_
+				#bar
+					span
+						span#login_section Login
+						span#register_section(style="margin-left:20px") Register
+					span#closePopup X
+				#pop_up_content.login_form
+					form(action="/login",method="post")
+						input(type="hidden", value="", id="address", class="address", name="address")
+						input#login_username.login_styl(type="text", placeholder="Username" name="username")
+						input#login_password.login_styl(type="password", placeholder="Password" name="password")
+						input#login_submit.login_styl(type="submit", value="LogIn", style="margin-bottom: 0")
+				#pop_up_content.register_form
+					form(action="/register",method="post")
+						input(type="hidden", value="", id="address", class="address", name="address")
+						input#register_username.login_styl(type="text", placeholder="Full Name" name="full_name")
+						input#register_username.login_styl(type="text", placeholder="Username" name="username")
+						input.login_styl(type="text", placeholder="Email" name="email")
+						input#register_password.login_styl(type="password", placeholder="Password" name="password")
+						input#login_submit.login_styl(type="submit", value="Register", style="margin-bottom: 0")
+
+		#content_
+			#activity_
+			#content
+				#tabs
+					#in_tabs
+						.tab(id="all") All
+						- for(var i = 0; i< tags.length; i++)
+							- if(i == 0)
+								.tab.selected(id=tags[i]) #{tags[i]}
+							-else
+								.tab(id=tags[i]) #{tags[i]}
+						
+				#articles_
+					#articles
+						each blog in arr
+							- var id = blog.id
+							.article
+								a.articlem(href="/blog?id="+id)
+									.articleH #{blog.heading}
+									.articleC #{blog.content}
+								.articleT_(style="display:flex;justify-content:space-between") 
+									a#author(style="color:white", href="/profile?u="+blog.username) #{blog.full_name}
+									.articleT #{blog.blog_date}
+
+		script(src="js/library.js")
+		script(src="js/index.js")

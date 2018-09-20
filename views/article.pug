@@ -1,0 +1,108 @@
+html
+	head
+		title Write.
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		link(rel="stylesheet", href="css/scroll.css")
+		link(rel="stylesheet", href="css/login.css")
+		link(rel="stylesheet", href="css/article.css")
+		link(href="https://fonts.googleapis.com/css?family=Raleway:900,400", rel='stylesheet', type='text/css')
+		link(href="https://fonts.googleapis.com/css?family=Lato", rel="stylesheet")
+		script.
+			var _global = {};
+			_global.user = ('!{user}' == '')? null:'!{user}';
+			var blogId = '!{blog_id}';
+
+	body
+		#header
+			#logo Write.
+			#navbar_
+				#search
+					#searchIcon_
+						img#searchIcon(src="images/searchIcon.svg")
+					//include ./includes/search.pug
+				#navbar
+					each json in nav
+						- var url = json.link || null
+						- var id = json.id || ''
+						.navlink(id=id)
+							if url
+								a(href=url) #{json.name}
+							else
+								| #{json.name}
+
+		#xbar
+			#searchbox
+				img#searchIcon(src="images/searchIcon.svg")
+				input.searchtext(type="text", placeholder="Search")
+			#links
+			#add_
+				img#add(src="images/add.png")
+
+		#transparent_screen(style="display:none")
+			#popup_
+				#bar
+					span
+						span#login_section Login
+						span#register_section(style="margin-left:20px") Register
+					span#closePopup X
+				#pop_up_content.login_form
+					form(action="/login",method="post")
+						input(type="hidden", value="", class="commentT", name="commentBox")
+						input(type="hidden", value="", id="address", class="address", name="address")
+						input#login_username.login_styl(type="text", placeholder="Username" name="username")
+						input#login_password.login_styl(type="password", placeholder="Password" name="password")
+						input#login_submit.login_styl(type="submit", value="LogIn", style="margin-bottom: 0")
+				#pop_up_content.register_form
+					form(action="/register",method="post")
+						input(type="hidden", value="", class="commentT", name="commentBox")
+						input(type="hidden", value="", id="address", class="address", name="address")
+						input#register_username.login_styl(type="text", placeholder="Full Name" name="full_name")
+						input#register_username.login_styl(type="text", placeholder="Username" name="username")
+						input.login_styl(type="text", placeholder="Email" name="email")
+						input#register_password.login_styl(type="password", placeholder="Password" name="password")
+						input#login_submit.login_styl(type="submit", value="Register", style="margin-bottom: 0")
+
+		#body
+			#articlesuper_
+				#article_
+					#header_
+						#heading.grey #{blog_heading}
+						//#collection_
+							#colHead.lightgrey Collection:
+							#collection.lightgrey Jokes
+					#article_info.lightgrey
+						#left
+							#author by 
+								a(href="/profile?u="+blog_username) #{blog_user}
+							#date #{blog_date}
+						#right
+							#views_
+								span#views.num.grey(style="margin-right:5px") #{blog_views}
+								| views
+							#likes_
+								img#likeBtn(src="images/thumbs_up.png")
+								span#like.num.grey #{blog_likes}
+								img#dislikeBtn(src="images/thumbs_down.png")
+								span#dislike.num.grey #{blog_dislikes}
+					#article.darkgrey !{blog_content}
+
+			#commentsuper_
+				form#commentbox_(action="/comment", method="post")
+					input(type="hidden", value=blog_id, name="blog_id")
+					span(style="font-weight:600; color:#484848; font-size:18px") Comment
+					textarea#commentbox(placeholder="Enter Your Comment Here", name="comment") #{commentb}
+					#cmntBtn_
+						input#cmnt_btn(type="submit",value="COMMENT")
+				#comments_
+					#comments
+						each comment in comments
+							#comment
+								#user 
+									a#user_name(href="/profile?u="+comment.username) #{comment.user}
+									span#ago #{comment.ago}
+								#text #{comment.comment}
+								.reply(name=comment.username) Reply
+		script(src="js/library.js")
+		script(src="js/article.js")
