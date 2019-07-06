@@ -4,7 +4,9 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "",
   "license": "ISC",
@@ -19,11 +21,13 @@
     "gulp-watch": "^4.3.11",
     "mysql": "^2.15.0",
     "pug": "^2.0.0-rc.3",
-    "redis": "^2.8.0"
+    "redis": "^2.8.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "chokidar": "^1.7.0",
     "html2pug": "^2.0.1",
     "xml-parser": "^1.2.1"
-  }
+  },
+  "snyk": true
 }
