@@ -12,8 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^2.0.1",
-    "body-parser": "^1.18.2",
-    "express": "^4.15.4",
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
     "express-session": "^1.15.6",
     "gulp": "^3.9.1",
     "gulp-pug": "^3.3.0",
