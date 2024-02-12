@@ -22,7 +22,7 @@
     "mysql": "^2.15.0",
     "pug": "^2.0.0-rc.3",
     "redis": "^2.8.0",
-    "snyk": "^1.258.2"
+    "snyk": "^1.996.0"
   },
   "devDependencies": {
     "chokidar": "^1.7.0",
