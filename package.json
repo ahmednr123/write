@@ -15,7 +15,7 @@
     "body-parser": "^1.18.2",
     "express": "^4.15.4",
     "express-session": "^1.15.6",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-pug": "^3.3.0",
     "gulp-stylus": "^2.6.0",
     "gulp-watch": "^4.3.11",
