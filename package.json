@@ -16,11 +16,11 @@
     "express": "^4.15.4",
     "express-session": "^1.15.6",
     "gulp": "^3.9.1",
-    "gulp-pug": "^3.3.0",
+    "gulp-pug": "^5.0.0",
     "gulp-stylus": "^2.6.0",
     "gulp-watch": "^4.3.11",
     "mysql": "^2.15.0",
-    "pug": "^2.0.0-rc.3",
+    "pug": "^3.0.0",
     "redis": "^2.8.0",
     "snyk": "^1.258.2"
   },
